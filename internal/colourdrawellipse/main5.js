@@ -3,7 +3,7 @@ console.log("main 5 js is called");
 objectSet = [];
 
 
-var myRect = new ControlObjectRect(canvas);
+var myRect = new ControlObjectEllipse(canvas);
 
 var myT = new button(50, 50, 200, 75, colArray[0][4], colArray[1][4], colArray[0][2], colArray[0][0], "red", canvas, myRect);
 var myT2 = new button(50, 125, 200, 75, colArray[0][5], colArray[1][5], colArray[0][2], colArray[0][0], "orange", canvas, myRect);

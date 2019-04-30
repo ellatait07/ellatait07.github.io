@@ -1,6 +1,6 @@
 console.log("control object js is called");
 
-class ControlObjectRect{
+class ControlObjectEllipse{
     constructor(canvas){
         this.objectSet = [];
         
