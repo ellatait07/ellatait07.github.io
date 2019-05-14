@@ -1,6 +1,6 @@
 console.log("rectangle js is called");
 
-class Square{
+class Circle{
     constructor(xM, xMS, yM, yMS, w, h, c1){
         this.xM = xM;
         this.xMS = xMS;
@@ -32,7 +32,7 @@ class Square{
             sqside = Math.abs(w);
         }
         ctx.beginPath();
-        ctx.rect((xMS+xM)/2-sqside/2, (yMS+yM)/2-sqside/2, sqside, sqside);
+        ctx.arc((xMS+xM)/2, (yMS+yM)/2, sqside/2, 0, 2*Math.PI);
         ctx.fill();
         
     }

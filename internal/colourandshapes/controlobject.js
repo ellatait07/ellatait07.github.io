@@ -1,6 +1,6 @@
 console.log("control object js is called");
 
-class ControlObjectSquare{
+class ControlObject{
     constructor(canvas){
         this.objectSet = [];
         
@@ -13,10 +13,14 @@ class ControlObjectSquare{
         this.mouseBounds = false;
 
         this.col = "";
+        this.shape = 
         this.xB = 250;
         this.yB = 50;
         this.wB = 500;
-        this.hB = 450;
+        this.hB = 410;
+
+        this.eX = 0;
+        this.eY = 0;
 
         this.w = 0;
         this.h = 0;
@@ -52,8 +56,19 @@ class ControlObjectSquare{
     mUp(e){
         //draws rectangle if the mouse was in bounds when it was down, if it is currently in bounds, and if a colour has been chosen
         if(this.mouseDown && this.mouseBounds && this.col){
-            var ROne = new Square(this.xMouse, this.xMouseStart, this.yMouse, this.yMouseStart, this.w, this.h, this.col);
-            this.objectSet.push(ROne);
+            console.log(shapeButton.selectedShape);
+
+
+            if(shapeButton.selectedShape == "Ellipse"){
+                var temp = new Ellipse(this.eX, this.eY, this.eW, this.eH, this.col);
+                console.log(temp);
+                this.objectSet.push(temp);
+            }
+            else if(shapeButton.selectedShape == "Rectangle"){
+                var temp = new Rectangle(this.xMouseStart, this.yMouseStart, this.w, this.h, this.col);
+                console.log(temp);
+                this.objectSet.push(temp);
+            }
         }
         //resets mouseDown for the next time it is clicked
         this.mouseDown = false;
@@ -61,9 +76,15 @@ class ControlObjectSquare{
     }
 
     update(){
-        this.drawCanvasRect(this.xB, this.yB, this.wB, this.hB, colArray[0][0]);
+        this.drawCanvasRect(this.xB, this.yB, this.wB, this.hB, colArray[0][12]);
         this.w = this.xMouse - this.xMouseStart;
         this.h = this.yMouse - this.yMouseStart;
+
+        this.eW = Math.abs(this.w/2);
+        this.eH = Math.abs(this.h/2);
+
+        this.eX = this.xMouseStart + (this.w/2);
+        this.eY = this.yMouseStart + (this.h/2);
 
         //draws the guide rectangle if the mouse is in bounds currently and it was in bounds when it was clicked down
         if(this.mouseBounds && this.mouseDown){
@@ -76,10 +97,14 @@ class ControlObjectSquare{
     }
 
     draw(){
-        //draws the guide rectangle
+        //draws the guide rectangle if a colour is selected
         if(this.col){
-            //this.drawRect(this.xMouseStart, this.yMouseStart, this.w, this.h);
-            this.drawSquare(this.xMouseStart, this.yMouseStart, this.w, this.h);
+            if(shapeButton.selectedShape == "Ellipse"){
+                this.drawEllipse(this.eX, this.eY, this.eW, this.eH);
+            }
+            else if(shapeButton.selectedShape == "Rectangle"){
+                this.drawRect(this.xMouseStart, this.yMouseStart, this.w, this.h);
+            }
         }
 
     }
@@ -107,6 +132,7 @@ class ControlObjectSquare{
         ctx.fill();
     }
 
+    //guide rectangle function
     drawRect(x, y, w, h){
         ctx.beginPath();
         ctx.rect(x, y, w, h);
@@ -115,21 +141,10 @@ class ControlObjectSquare{
         ctx.stroke();
     }
 
-    drawSquare(x, y, w, h){
-        /*ctx.beginPath();
-        ctx.arc((this.xMouseStart+this.xMouse)/2, (this.yMouseStart+this.yMouse)/2,10,0,2*Math.PI);
-        ctx.strokeStyle = "rgb(0,0,255)";
-        ctx.stroke();*/
-      
-        var sqside = 0;
-        if(Math.abs(w)>Math.abs(h)){
-            sqside = Math.abs(h);
-        }
-        else {
-            sqside = Math.abs(w);
-        }
+    //guide ellipse function
+    drawEllipse(x, y, w, h){
         ctx.beginPath();
-        ctx.rect((this.xMouseStart+this.xMouse)/2-sqside/2, (this.yMouseStart+this.yMouse)/2-sqside/2,sqside,sqside);
+        ctx.ellipse(x, y, w, h, 0, 0, 2* Math.PI);
         ctx.lineWidth = 1;
         ctx.strokeStyle = this.col;
         ctx.stroke();

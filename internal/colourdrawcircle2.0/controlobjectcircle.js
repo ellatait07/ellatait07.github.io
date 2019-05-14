@@ -52,7 +52,7 @@ class ControlObjectSquare{
     mUp(e){
         //draws rectangle if the mouse was in bounds when it was down, if it is currently in bounds, and if a colour has been chosen
         if(this.mouseDown && this.mouseBounds && this.col){
-            var ROne = new Square(this.xMouse, this.xMouseStart, this.yMouse, this.yMouseStart, this.w, this.h, this.col);
+            var ROne = new Circle(this.xMouse, this.xMouseStart, this.yMouse, this.yMouseStart, this.w, this.h, this.col);
             this.objectSet.push(ROne);
         }
         //resets mouseDown for the next time it is clicked
@@ -79,7 +79,8 @@ class ControlObjectSquare{
         //draws the guide rectangle
         if(this.col){
             //this.drawRect(this.xMouseStart, this.yMouseStart, this.w, this.h);
-            this.drawSquare(this.xMouseStart, this.yMouseStart, this.w, this.h);
+            //this.drawSquare(this.xMouseStart, this.yMouseStart, this.w, this.h);
+            this.drawCircle(this.xMouseStart, this.yMouseStart, this.w, this.h);
         }
 
     }
@@ -116,11 +117,6 @@ class ControlObjectSquare{
     }
 
     drawSquare(x, y, w, h){
-        /*ctx.beginPath();
-        ctx.arc((this.xMouseStart+this.xMouse)/2, (this.yMouseStart+this.yMouse)/2,10,0,2*Math.PI);
-        ctx.strokeStyle = "rgb(0,0,255)";
-        ctx.stroke();*/
-      
         var sqside = 0;
         if(Math.abs(w)>Math.abs(h)){
             sqside = Math.abs(h);
@@ -129,8 +125,22 @@ class ControlObjectSquare{
             sqside = Math.abs(w);
         }
         ctx.beginPath();
-        ctx.rect((this.xMouseStart+this.xMouse)/2-sqside/2, (this.yMouseStart+this.yMouse)/2-sqside/2,sqside,sqside);
+        ctx.rect((this.xMouseStart+this.xMouse)/2-sqside/2, (this.yMouseStart+this.yMouse)/2-sqside/2, sqside, sqside);
         ctx.lineWidth = 1;
+        ctx.strokeStyle = this.col;
+        ctx.stroke();
+    }
+
+    drawCircle(x, y, w, h){
+        var sqside = 0;
+        if(Math.abs(w)>Math.abs(h)){
+            sqside = Math.abs(h);
+        }
+        else {
+            sqside = Math.abs(w);
+        }
+        ctx.beginPath();
+        ctx.arc((this.xMouseStart+this.xMouse)/2, (this.yMouseStart+this.yMouse)/2, sqside/2, 0, 2*Math.PI);
         ctx.strokeStyle = this.col;
         ctx.stroke();
     }
