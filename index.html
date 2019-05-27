@@ -8,8 +8,71 @@
     <style type="text/css">
     body{
         background-color: rgb(255, 231, 154);
-        text-align: left;
+        
         font-family: sans-serif; 
+    }
+
+    .header{
+        width: 75em;
+        margin: auto;
+        max-width: 100%;
+        background: #fffcd6;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .container{
+        width: 75em;
+        margin: auto;
+        max-width: 100%;
+        background: #fffcd6;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        
+    }
+    .footer{
+        width: 75em;
+        margin: auto;
+        max-width: 100%;
+        background: #fffcd6;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+        margin-top: 20px;
+        
+    }
+
+
+    h1{
+        margin-right: 75px;
+        margin-left: 75px;
+    }
+    h2{
+        margin-right: 75px;
+        margin-left: 75px;
+        font-size: 30px;
+    }
+    h3{
+        margin-right: 75px;
+        margin-left: 75px;
+    }
+    h4{
+        margin-right: 75px;
+        margin-left: 75px;
+    }
+    p{
+        margin-right: 75px;
+        margin-left: 75px;
     }
 
     .img{
@@ -18,17 +81,22 @@
     </style>
 </head>
 <body>
+    <div class='header'>
+            <h1>Internal work</h1>
+    </div>
 
-    <h1>Internal work</h1>
+    <div class='container'>
 
     <!--Start of Sprint 1-->
     <h2>Sprint 1</h2>
     <h4>Aim: Create a drawing canvas in which rectangles can be drawn. Rectangles should not be able to be drawn outside this drawing canvas.</h4>
-    <p>Link to finished sprint: <a href="internal/colourdrawrect/colourdrawrect.html">Sprint 1</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint1/colourdrawrect.html">Sprint 1</a></p>
     <p>Link to Trello Board: <a href="https://trello.com/b/iHnkUbvy/sprint-1-drawing-canvas">Trello Sprint 1</a></p>
     <br>
-    <img src="images/trellosprint1.png" alt="Trello Board for Sprint 1" height="407" width="718.5">
+    <img src="testing/Sprint1/trellosprint1.png" alt="Trello Board for Sprint 1" height="407" width="718.5">
     <br>
+    <br>
+    <a href="testing1.html">Testing for Sprint 1</a>
     <p>Next Step: Allow the user to draw different shapes on the drawing canvas.</p>
     <br>
     <!--End of Sprint 1-->
@@ -36,11 +104,13 @@
     <!--Start of Sprint 2-->
     <h2>Sprint 2</h2>
     <h4>Aim: Allow the user to draw circles within the drawing canvas instead of rectangles.</h4>
-    <p>Link to finished sprint: <a href="internal/colourdrawcirc/colourdrawcirc.html">Sprint 2</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint2/colourdrawcirc.html">Sprint 2</a></p>
     <p>Link to Trello Board: <a href="https://trello.com/b/cmo6wroB/sprint-2-circle-drawing">Trello Sprint 2</a></p>
     <br>
-    <img src="images/trellosprint2.png" alt="Trello Board for Sprint 2" height="399.5" width="718.5">
+    <img src="testing/Sprint2/trellosprint2.png" alt="Trello Board for Sprint 2" height="399.5" width="718.5">
     <br>
+    <br>
+    <a href="testing2.html">Testing for Sprint 2</a>
     <p>Next Step: Fix the error where the stroke of the dragging circle doesn’t show up by making circles inside a bounding rectangle.</p>
     <br>
     <!--End of Sprint 2-->
@@ -48,34 +118,13 @@
     <!--Start of Sprint 3-->
     <h2>Sprint 3</h2>
     <h4>Aim: Allow the user to draw ellipses within the drawing canvas instead of rectangles.</h4>
-    <p>Link to finished sprint: <a href="internal/colourdrawellipse/colourdrawellipse.html">Sprint 3</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint3/colourdrawellipse.html">Sprint 3</a></p>
     <p>Link to Trello Board: <a href=" https://trello.com/b/LmPZXWlB/sprint-3-circle-in-rectangle-bound-box">Trello Sprint 3</a></p>
     <br>
-    <img src="images/trellosprint3.png" alt="Trello Board for Sprint 3" height="382" width="719.5">
+    <img src="testing/Sprint3/trellosprint3.png" alt="Trello Board for Sprint 3" height="382" width="719.5">
     <br>
-
-    <h3>Testing:</h3>
-
-    <p>Test 1:</p>
-    <video width="636" height="269" controls>
-        <source src="videos/ellipsetest1.mp4" type="video/mp4">
-    </video>
-
-    <p>Test 2:</p>
-    <video width="636" height="269" controls>
-        <source src="videos/ellipsetest2.mp4" type="video/mp4">
-    </video>
-
-    <p>Test 3:</p>
-    <video width="636" height="269" controls>
-        <source src="videos/ellipsetest3.mp4" type="video/mp4">
-    </video>
-
-    <p>Showing the issue with the guide shape drawing behind already instantiated shapes:</p>
-    <video width="636" height="269" controls>
-        <source src="videos/ellipsetest4.mp4" type="video/mp4">
-    </video>
-
+    <br>
+    <a href="testing3.html">Testing for Sprint 3</a>
     <p>Next Step: Allow the user to draw exact squares.</p>
     <br>
     <!--End of Sprint 3-->
@@ -83,100 +132,72 @@
     <!--Start of Sprint 4-->
     <h2>Sprint 4</h2>
     <h4>Aim: Allow the user to choose different shapes to draw with</h4>
-    <p>Link to finished sprint: <a href="internal/shapechoosebuttons/shapechoosebuttons.html">Sprint 4</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint4/shapechoosebuttons.html">Sprint 4</a></p>
     <p>Link to Trello Board: <a href="https://trello.com/b/JUVzN66y/sprint-4-shape-choosing">Trello Sprint 4</a></p>
     <br>
-    <img src="images/trellosprint4.png" alt="Trello Board for Sprint 4" height="409" width="719">
+    <img src="testing/Sprint4/trellosprint4.png" alt="Trello Board for Sprint 4" height="409" width="719">
     <br>
-
-    <h3>Testing:</h3>
-
-    <p>Test 1: Showing changing between shapes</p>
-    <video width="632" height="269" controls>
-        <source src="videos/changeshapestest1.mp4" type="video/mp4">
-    </video>
+    <br>
+    <a href="testing4.html">Testing for Sprint 4</a>
 
     <!--End of Sprint 4-->
     
     <!--Start of Sprint 5-->
     <h2>Sprint 5</h2>
     <h4>Aim: Allow the user to choose different shapes and colours to draw with</h4>
-    <p>Link to finished sprint: <a href="internal/colourandshapes/colourandshapes.html">Sprint 5</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint5/colourandshapes.html">Sprint 5</a></p>
     <p>Link to Trello Board: <a href="https://trello.com/b/BwWLTUcq/sprint-5-colour-and-shape-choosing">Trello Sprint 5</a></p>
     <br>
-    <img src="images/trellosprint5.png" alt="Trello Board for Sprint 5" height="407.5" width="718.5">
+    <img src="testing/Sprint5/trellosprint5.png" alt="Trello Board for Sprint 5" height="407.5" width="718.5">
     <br>
+    <br>
+    <a href="testing5.html">Testing for Sprint 5</a>
 
-    <h3>Testing:</h3>
-
-    <p>Test 1: Showing that the sprint works</p>
-    <video width="634" height="306" controls>
-        <source src="videos/colourshapestest1.mp4" type="video/mp4">
-    </video>
-
-    <p>Test 2: Showing that it the user must choose both a colour and a shape before drawing</p>
-    <video width="634" height="306" controls>
-        <source src="videos/colourshapestest2.mp4" type="video/mp4">
-    </video>
-
-    <p>Colour testing:</p>
-    <img src="images/colours1.png" alt="testing colours" height="408" width="720">
-    <p>Example of making the colour shades more defined:</p>
-    <img src="images/colours2.png" alt="testing colours" height="409.5" width="720">
-
-    <p>Test 3: Showing improved colour palette and layout of page</p>
-    <video width="634" height="306" controls>
-        <source src="videos/colourshapestest3.mp4" type="video/mp4">
-    </video>
     <!--End of Sprint 5-->
 
     <!--Start of Sprint 6-->
     <h2>Sprint 6</h2>
     <h4>Aim: Create more shapes for the user to draw with</h4>
-    <p>Link to finished sprint: <a href="internal/moreshapesandcolour/moreshapesandcolour.html">Sprint 6</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint6/moreshapesandcolour.html">Sprint 6</a></p>
     <p>Link to Trello Board: <a href="https://trello.com/b/5YHDRirX/sprint-6-more-shapes">Trello Sprint 6</a></p>
     <br>
-    <img src="images/trellosprint6.png" alt="Trello Board for Sprint 6" height="407.5" width="718.5">
+    <img src="testing/Sprint6/trellosprint6.png" alt="Trello Board for Sprint 6" height="407.5" width="718.5">
     <br>
-
-    <h3>Square Testing:</h3>
-    <h4>Link to prototype: <a href="internal/colourdrawsquare/colourdrawsquare.html">Square</a></h4>
-
-    <p>Square Test 1: Guide square not working</p>
-    <video width="636" height="269" controls>
-        <source src="videos/squaretest1.mp4" type="video/mp4">
-    </video>
-
-    <p>Square Test 2: Square working in basic file</p>
-    <video width="634" height="306" controls>
-        <source src="videos/squaretest2.mp4" type="video/mp4">
-    </video>
-
-    <p>Square Test 3: Square added to main file + showing fixed guide square issue with order</p>
-    <video width="634" height="306" controls>
-        <source src="videos/moreshapestest1.mp4" type="video/mp4">
-    </video>
-
-    <h3>Circle Testing:</h3>
-    <h4>Link to prototype: <a href="internal/colourdrawcircle2.0/colourdrawcircle.html">Circle</a></h4>
-
-    <p>Circle Test 1: Guide circle working</p>
-    <video width="634" height="306" controls>
-        <source src="videos/circletest1.mp4" type="video/mp4">
-    </video>
-
-    <p>Circle Test 2: Circle working in basic file</p>
-    <video width="634" height="306" controls>
-        <source src="videos/circletest2.mp4" type="video/mp4">
-    </video>
-
-    <p>Circle Test 3: Circle added to main file</p>
-    <video width="634" height="306" controls>
-        <source src="videos/moreshapestest2.mp4" type="video/mp4">
-    </video>
+    <br>
+    <a href="testing6.html">Testing for Sprint 6</a>
 
     <!--End of Sprint 6-->
 
+    <!--Start of Sprint 7-->
+    <h2>Sprint 7</h2>
+    <h4>Aim: Create a brush tool</h4>
+    <p>Link to finished sprint: <a href="internal/sprint7/2moreshapesandcolour.html">Sprint 7</a></p>
+    <p>Link to Trello Board: <a href="https://trello.com/b/T4QykPN7/sprint-7-brushes-and-lines">Trello Sprint 7</a></p>
+    <br>
+    <img src="testing/Sprint7/trellosprint7.png" alt="Trello Board for Sprint 7" height="407.5" width="718.5">
+    <br>
+    <br>
+    <a href="testing7.html">Testing for Sprint 7</a>
+    
+
+    <!--End of Sprint 7-->
+
+    <!--Sprint 8-->
+    <h2>Sprint 8</h2>
+    <h4>Aim: Allow the user to change the background colour, undo the last thing they drew, clear the canvas, and erase what they have drawn</h4>
+    <p>Link to finished sprint: <a href="internal/2moreshapesandcolour/2moreshapesandcolour.html">Sprint 8</a></p>
+    <p>Link to Trello Board: <a href="https://trello.com/b/vdrblEc9/sprint-8-fix-the-brush-tool">Trello Sprint 8</a></p>
+    <br>
+    <img src="" alt="Trello Board for Sprint 8" height="407.5" width="718.5">
+    <br>
+    <br>
+    <a href="testing8.html">Testing for Sprint 8</a>
+
+    <!--End of Sprint 8-->
+
+</div>
+
+<div class='footer'>
 
     <h3>Prep for the internal, incl. video work and other tests</h3>
     <ul>
@@ -192,6 +213,7 @@
     <li><a href="prep/objects/objects.html">Objects</a></li>
     <li><a href="prep/rotations/rotations.html">Rotations</a></li>
     </ul>
+</div>
 
     
 </body>
