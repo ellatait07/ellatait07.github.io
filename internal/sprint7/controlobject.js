@@ -33,6 +33,7 @@ class ControlObject{
         this.element.addEventListener('mousemove', this.mMove.bind(this));
         this.element.addEventListener('mouseup', this.mUp.bind(this));
 
+        this.bitmap = new Image();
         
     }
 
