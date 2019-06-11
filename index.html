@@ -185,7 +185,7 @@
     <!--Sprint 8-->
     <h2>Sprint 8</h2>
     <h4>Aim: Allow the user to change the background colour, undo the last thing they drew, clear the canvas, and erase what they have drawn</h4>
-    <p>Link to finished sprint: <a href="internal/2moreshapesandcolour/2moreshapesandcolour.html">Sprint 8</a></p>
+    <p>Link to finished sprint: <a href="internal/sprint8/undo.html">Sprint 8</a></p>
     <p>Link to Trello Board: <a href="https://trello.com/b/vdrblEc9/sprint-8-fix-the-brush-tool">Trello Sprint 8</a></p>
     <br>
     <img src="" alt="Trello Board for Sprint 8" height="407.5" width="718.5">
@@ -194,6 +194,68 @@
     <a href="testing8.html">Testing for Sprint 8</a>
 
     <!--End of Sprint 8-->
+
+    <!--Sprint 8-->
+    <h2>Final Product</h2>
+    <h4>Aim: To clean up the code to create a polished and error-free finished program.</h4>
+    <p>Link to finished sprint: <a href="internal/sprint9/final.html">Sprint 8</a></p>
+    <p>Link to Trello Board: <a href="https://trello.com/b/df0vOSAU/sprint-9-clean-up">Trello Sprint 8</a></p>
+    <br>
+    <img src="" alt="Trello Board for Sprint 9" height="407.5" width="718.5">
+    <br>
+    <br>
+    <a href="testing9.html">Testing for Sprint 9</a>
+
+    <!--End of Sprint 8-->
+
+    <h3>Relevant Implications</h3>
+    <p>Future proofing 
+        - Program is designed so new features can be added easily and old ones removed (yes it is, have been doing it the whole time)
+        - Addressed in the way the program has been designed 
+            - program elements (colours, buttons, shapes) have all been programmed as objects
+            - means each object is a self contained modular piece of code (separate piece you just plug into the system) that takes a defined set of parameters to work
+            - (many take basc mouse data and colour information)
+            - all objects are built to a similar structure and compulsorily contain an update function which means they can appear on the interface using the update call
+            - management of most of the objects happens in a central place (control object)
+            - idea is an experienced programmer could easily remove elements or add new features
+            - comments are also precise and informative
+
+        Functionality
+        - Does the program work well?
+            - free of bugs
+            - loads quickly
+            - works on different browsers (not phone)
+        - How have we addressed this?
+            - Program is in pure javascript (almost)
+            - Has no graphics, so loads very quickly.
+            - I have tested this by using a live webserver (github) to store my versions, and have observed loading performance.
+        - To ensure the program works well I have systematically tested it
+            - tested user interactions (position of clicking and directions of dragging, etc)
+            - this has included careful checks around boundaries
+            - the use of the mouse.abs function was the result of testing failures drawing circular shapes (because these objects were being given negative radius values)
+            - most new components were tested prior to being added to the main program
+            - at various stages in sprints, console logging was used to analyse boundary test functions, and locate problems when bugs appeared
+    </p>
+
+    <h3>Examples of trialling and making decisions</h3>
+    <p>Can you find examples of exploring different options and making a decision about which is the best solution?
+            - dodgy circle at start then changed (trialling different options for allowing the user to draw circles on screen --> giving circular or rectangular guides)
+            - brush then making bitmap
+        Effectively using information from testing and trialling to improve the functionality of the outcome
+            - interface design (trialling colour themes + changing shades to make them more defined in sprint 5)
+            - changing widths of the brush from 1px, 2px, etc to 2px, 4px, etc (eg from incrementing by 1 to incrementing by 2)
+            - changing the numbers on width buttons to different sized circles
+            - changing colour buttons from originals with text to the swatches
+        How did your working process (planning, testing, trialling) leading to the development of a high quality digital outcome.
+            - How was the Agile process helpful?
+                - allowed planning and development to happen together
+                - created repeated cycles of plan --> develop --> tested 
+                - after two or three sprints I got a much clearer idea of what I could achieve and my aims became much more focused and realistic
+                - helped to see the project in a highly simplified form at the start (potentially shippable product)
+                - good to talk about 'project backlog' and concept of prioritsation
+
+    </p>
+
 
 </div>
 
