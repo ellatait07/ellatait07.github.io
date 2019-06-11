@@ -27,8 +27,8 @@ function setupCanvas(canvas) {
   // but will look sharper on high-DPI devices!
 var ctx = setupCanvas(document.querySelector('#myCanvas'));
 canvas = document.querySelector('#myCanvas');
-ctx.width = canvas.width/myScale;
-ctx.height = canvas.height/myScale;
+var width = canvas.width/myScale;
+var height = canvas.height/myScale;
 console.log(width);
 console.log(height);
 

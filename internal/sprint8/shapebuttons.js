@@ -120,8 +120,7 @@ class shapeButton{
         ctx.fillStyle = this.c1;
         ctx.font = "20px sans-serif";
         ctx.textAlign = "center";
-        const baseline = 'middle';
-        ctx.textBaseline = baseline;
+        ctx.textBaseline = 'middle';
         ctx.fillText(this.name, this.x + this.w/2, this.y + this.h/2);
 
     }
