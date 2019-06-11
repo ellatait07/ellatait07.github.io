@@ -124,12 +124,5 @@ class ControlObjectBrush{
         ctx.rect(x, y, w, h);
         ctx.fill();
     }
-
-    /*drawBrush(xMS, xM, yMS, yM, r){
-        ctx.beginPath();
-        ctx.arc((xMS+xM)/2, (yMS+yM)/2, r, 0, 2*Math.PI);
-        ctx.strokeStyle = this.col;
-        ctx.stroke();
-    }*/
 }
 

@@ -116,11 +116,6 @@ class ControlObjectSquare{
     }
 
     drawSquare(x, y, w, h){
-        /*ctx.beginPath();
-        ctx.arc((this.xMouseStart+this.xMouse)/2, (this.yMouseStart+this.yMouse)/2,10,0,2*Math.PI);
-        ctx.strokeStyle = "rgb(0,0,255)";
-        ctx.stroke();*/
-      
         var sqside = 0;
         if(Math.abs(w)>Math.abs(h)){
             sqside = Math.abs(h);

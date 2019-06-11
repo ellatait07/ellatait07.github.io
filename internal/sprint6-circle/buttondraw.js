@@ -110,7 +110,7 @@ class button{
         ctx.fillStyle = this.c4;
         ctx.font = "30px sans-serif";
         ctx.textAlign = "center";
-        const baseline = 'middle';
+        ctx.baseline = 'middle';
         ctx.textBaseline = baseline;
         ctx.fillText(this.textC, this.x + this.w/2, this.y + this.h/2);
 

@@ -1,4 +1,3 @@
-console.log("init js file has been called");
 // ----------------- set up code includes resolution management
 var myScale = 0;
 
@@ -27,35 +26,35 @@ function setupCanvas(canvas) {
   // but will look sharper on high-DPI devices!
 var ctx = setupCanvas(document.querySelector('#myCanvas'));
 canvas = document.querySelector('#myCanvas');
-ctx.width = canvas.width/myScale;
-ctx.height = canvas.height/myScale;
-console.log(width);
-console.log(height);
+var width = canvas.width/myScale;
+var height = canvas.height/myScale;
 
 //creates the offscreen canvas to improve brush performance
 var cv = new OffscreenCanvas(1200, 700);
 var cty = cv.getContext('2d');
 
 var colArray=[
-  //middle colours in spectrum order + white, grey, black
-  [
-  "rgba(255, 102, 102, 1)", "rgba(255, 178, 102, 1)", "rgba(255, 255, 102, 1)",
-  "rgba(178, 255, 102, 1)","rgba(102, 255, 102, 1)", "rgba(102, 255, 178, 1)", "rgba(102, 255, 255, 1)",
-  "rgba(102, 178, 255, 1)", "rgba(102, 102, 255, 1)", "rgba(178, 102, 255, 1)", "rgba(255, 102, 255, 1)",
-  "rgba(255, 102, 178, 1)", "rgba(255,255,255,1)", "rgba(153,153,153,1)", "rgba(0,0,0,1)", 
-  ],
-  //light colours in spectrum order
-  [
-  "rgba(255, 153, 153, 1)", "rgba(255, 204, 153, 1)", "rgba(255, 255, 153, 1)",
-  "rgba(204, 255, 153, 1)","rgba(153, 255, 153, 1)", "rgba(153, 255, 204, 1)", "rgba(153, 255, 255, 1)",
-  "rgba(153, 204, 255, 1)", "rgba(153, 153, 255, 1)", "rgba(204, 153, 255, 1)", "rgba(255, 153, 255, 1)",
-  "rgba(255, 153, 204, 1)"
-  ],
-  //dark colours in spectrum order
+  //dark colours in spectrum - skin tones - greyscale
   [
     "rgba(255, 51, 51, 1)", "rgba(255, 153, 51, 1)", "rgba(255, 255, 51, 1)",
-    "rgba(153, 255, 51, 1)","rgba(0, 255, 0, 1)", "rgba(51, 255, 153, 1)", "rgba(0, 230, 230, 1)",
-    "rgba(51, 153, 255, 1)", "rgba(51, 51, 255, 1)", "rgba(153, 51, 255, 1)", "rgba(204, 0, 204, 1)",
-    "rgba(255, 51, 153, 1)"
+    "rgba(0, 255, 0, 1)", "rgba(51, 255, 153, 1)", "rgba(0, 230, 230, 1)",
+    "rgba(51, 153, 255, 1)", "rgba(153, 51, 255, 1)", "rgba(204, 0, 204, 1)",
+    "rgba(255, 51, 153, 1)", "rgba(224, 172, 105, 1)", "rgba(96, 57, 9, 1)", "rgba(0, 0, 0, 1)"
     ],
+  //middle colours in spectrum - skin tones - greyscale
+  [
+  "rgba(255, 102, 102, 1)", "rgba(255, 178, 102, 1)", "rgba(255, 255, 102, 1)",
+  "rgba(102, 255, 102, 1)", "rgba(102, 255, 178, 1)", "rgba(102, 255, 255, 1)",
+  "rgba(102, 178, 255, 1)", "rgba(178, 102, 255, 1)", "rgba(255, 102, 255, 1)",
+  "rgba(255, 102, 178, 1)", "rgba(241, 194, 125, 1)", "rgba(141, 85, 36, 1)", "rgba(153,153,153,1)"
+  ],
+  //light colours in spectrum - skin tones - greyscale
+  [
+  "rgba(255, 153, 153, 1)", "rgba(255, 204, 153, 1)", "rgba(255, 255, 153, 1)",
+  "rgba(153, 255, 153, 1)", "rgba(153, 255, 204, 1)", "rgba(153, 255, 255, 1)",
+  "rgba(153, 204, 255, 1)", "rgba(204, 153, 255, 1)", "rgba(255, 153, 255, 1)",
+  "rgba(255, 153, 204, 1)", "rgba(255, 219, 172, 1)", "rgba(198, 134, 66, 1)", "rgba(255,255,255,1)"
+  ],
+  
+  
   ]
