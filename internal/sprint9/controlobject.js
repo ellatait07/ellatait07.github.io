@@ -85,15 +85,17 @@ class ControlObject{
 
         }
         //pushes the bitmap when the brush line is drawn
-        if(shapeButton.selectedShape == "Brush"){
+        if(this.mouseDown && this.col && this.r && shapeButton.selectedShape == "Brush"){
             console.log(this.tempBitMap);
-            this.objectSet.push(new DrawImage(this.tempBitMap))
+            this.objectSet.push(new DrawImage(this.tempBitMap));
+            console.log(this.objectSet);
             this.tempBitMap = new Image();
         }
         //removes last item pushed to objectSet array from the page
         else if(shapeButton.selectedShape == 'Undo'){
             this.objectSet.pop();
             shapeButton.selectedShape = "";
+            console.log(this.objectSet);
         }
         //clears the objectSet array
         else if(shapeButton.selectedShape == 'Clear'){
@@ -112,6 +114,17 @@ class ControlObject{
         //clip function cuts off the brush tool when it reaches the edge of the canvas
         ctx.clip();
 
+        
+
+        //calculates the width and height for the guide shapes
+        this.w = this.xMouse - this.xMouseStart;
+        this.h = this.yMouse - this.yMouseStart;
+
+        //updates the objectSet array
+        for(var i=0; i<this.objectSet.length; i++){
+            this.objectSet[i].update();
+        }
+
         //creates the brush and bitmap is created from this
         if(shapeButton.selectedShape == "Brush"){
             this.r = widthButton.selectedWidth;
@@ -124,15 +137,6 @@ class ControlObject{
                 this.tempBitMap = cv.transferToImageBitmap();
                 ctx.drawImage(this.tempBitMap, 0, 0);
             }
-        }
-
-        //calculates the width and height for the guide shapes
-        this.w = this.xMouse - this.xMouseStart;
-        this.h = this.yMouse - this.yMouseStart;
-
-        //updates the objectSet array
-        for(var i=0; i<this.objectSet.length; i++){
-            this.objectSet[i].update();
         }
 
         //runs the draw function when conditions are fulfilled

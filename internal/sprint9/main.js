@@ -42,9 +42,6 @@ var myS8 = new shapeButton(965, 480, 210, 50, colArray[0][12], colArray[0][12], 
 
 objectSet.push(myShape, myS, myS2, myS3, myS4, myS5, myS6, myS7, myS8);
 
-//creates bitmap
-bitmapTwo = new Image();
-
 //updates objectSet
 function animate(){
     ctx.clearRect(0, 0, width, height);
